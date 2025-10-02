@@ -4,6 +4,8 @@ b = int(sys.argv[2])
 c = a + b
 diff = b - a
 prod = b * a
+div = a/b
 print(f"The sum of nums {a} and {b} is : {c}")
 print(f'The diff of numd {b} and {a} is : {diff}')
 print(f'The product of 2 nums {a} and {b} is : {prod}')
+print(f'The div of 2 nums {a} and {b} is : {div}')
