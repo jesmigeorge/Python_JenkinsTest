@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage("Build Docker Image") {
             steps {
-                sh 'docker build -t pyjenks-img .'
+                bat 'docker build -t pyjenks-img .'
             }
         }
 
         stage("Run Python Script in Container") {
             steps {
-                sh 'docker run --rm pyjenks-img'
+                bat 'docker run --rm pyjenks-img'
             }
         }
 
