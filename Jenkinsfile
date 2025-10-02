@@ -2,15 +2,18 @@ pipeline {
     agent any
 
     stages {
-        stage("build"){
+        stage("build the image"){
             steps {
                 echo "building the app"
+                docker build -t pyjenks-img .
+
             }
         }
 
-        stage("test"){
+        stage("run the img to get containers"){
             steps {
                 echo "testing the app"
+                docker run --rm pyjenks-img
             }
         }
 
