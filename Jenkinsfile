@@ -6,7 +6,6 @@ pipeline {
             steps {
                 echo "building the app"
                 docker build -t pyjenks-img .
-
             }
         }
 
